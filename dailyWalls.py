@@ -5,9 +5,7 @@ import os
 
 def getImage(url):
     response = requests.get(url)
-    name = response.url.split("/")[
-        4
-    ]  # This splits the response url and then extracts the image id to be used as file name
+    name = response.url.split("/")[4]  # This splits the response url and then extracts the image id to be used as file name
 
     open(f"files/{name}.jpg", "wb").write(
         response.content
